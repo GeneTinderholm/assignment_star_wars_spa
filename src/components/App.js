@@ -46,6 +46,7 @@ class App extends Component {
         <NavLinks />
         <Switch>
           <Route exact path="/" component={Home} />
+          
           <Route path="/:search/:page" component={Search} />
         </Switch>
       </div>

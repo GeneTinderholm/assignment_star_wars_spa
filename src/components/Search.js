@@ -105,16 +105,16 @@ class Search extends Component {
         case 'starships':
           return json.results.map(item => {
             return (
-              <ul>
-                <li>{item.name}</li>
-                <li>{item.model}</li>
-                <li>{item.manufacturer}</li>
-                <li>{item.cost_in_credits}</li>
-                <li>{item.length}</li>
-                <li>{item.max_atmosphering_speed}</li>
-                <li>{item.crew}</li>
-                <li>{item.passengers}</li>
-              </ul>
+              <div style={{marginBottom:'50px', border:'1px solid black'}}>
+                <Link to={`/starships/${item.id}`}><p>{item.name}</p></Link>
+                <p>{item.model}</p>
+                <p>{item.manufacturer}</p>
+                <p>{item.cost_in_credits}</p>
+                <p>{item.length}</p>
+                <p>{item.max_atmosphering_speed}</p>
+                <p>{item.crew}</p>
+                <p>{item.passengers}</p>
+              </div>
             );
           });
         default:
