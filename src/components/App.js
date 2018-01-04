@@ -7,8 +7,8 @@ import {
   NavLink,
   Switch
 } from "react-router-dom";
-import Search from './Search';
-import Home from './Home';
+import Search from "./Search";
+import Home from "./Home";
 
 const NavLinks = () => (
   <div className="NavLinks">
@@ -43,7 +43,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-      <NavLinks />
+        <NavLinks />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/:search/:page" component={Search} />
